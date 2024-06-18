@@ -1,0 +1,53 @@
+const $loginForm = document.querySelector(".auth-form");
+const $inputEmail = document.querySelector("#email");
+const $inputPassword = document.querySelector("#password");
+
+
+
+const ToastifyDisplay = (message,type) => {
+    return  Toastify({
+         className: type === "succes" ? "succes" : "error",
+         text: message,  
+         duration: 3000  
+         })
+ }
+
+function User (email,password) {
+    this.email = email,
+    this.password = password
+}
+
+
+const loggedUser =  (e) => {
+    e.preventDefault();
+    var userEmail = $inputEmail.value;
+    var userPassword = $inputPassword.value;
+
+    let newUser = new User(userEmail,userPassword)
+  
+
+   fetch("https://blogpost-server-production-d92d.up.railway.app/api/v1/user/login" , {
+        method: "POST",
+        headers: {
+            "Content-type" : "application/json"
+        },
+        body:JSON.stringify(newUser)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        if (data && data.data.token) {
+            localStorage.setItem("token", data.data.token)
+            ToastifyDisplay("Succesfully logged in", "succes").showToast()
+
+            setTimeout(() => {
+                location.replace( window.location.origin + "/index.html")
+            },3000)
+        }
+    })
+}
+
+
+
+
+$loginForm.addEventListener("submit", loggedUser)
