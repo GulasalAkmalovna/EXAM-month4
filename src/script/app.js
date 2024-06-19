@@ -1,5 +1,4 @@
 
-// const $swipperSlide = document.querySelector(".swiper-slide");
 const $swipperWrapper = document.querySelector(".swiper-wrapper");
 const $carusel = document.querySelector(".carusel")
 
@@ -56,16 +55,6 @@ fetch("https://blogpost-server-production-d92d.up.railway.app/api/v1/blogs")
 }
 loadData()
 
-
-// swipper
-// var swiper = new Swiper(".mySwiper", {
-//   slidesPerView: 3,
-//   spaceBetween: 30,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
 
 
 
