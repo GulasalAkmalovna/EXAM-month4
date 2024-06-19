@@ -129,4 +129,8 @@ textarea{
     border-radius: 10px;
     background-color: #F5C147;
    margin: 30px auto;
+   transition: 0.3s;
+}
+#create-btn:active{
+    transform: scale(0.95);
 }
