@@ -29,6 +29,7 @@ const addNewProduct = (e) => {
     })
     .then(response => response.json())
     .then(data => data)
+
 }
 
 $addForm.addEventListener("submit" , addNewProduct)

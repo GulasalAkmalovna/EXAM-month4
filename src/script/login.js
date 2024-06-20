@@ -35,7 +35,7 @@ const loggedUser =  (e) => {
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        console.log(data.data.token)
         if (data && data.data.token) {
             localStorage.setItem("token", data.data.token)
             ToastifyDisplay("Succesfully logged in", "succes").showToast()
