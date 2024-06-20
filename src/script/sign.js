@@ -44,7 +44,7 @@ const registerNewUser = async (e) => {
         ToastifyDisplay("Succesfully registered", "succes").showToast( )
 
         setTimeout(() => {
-            location.replace("http://127.0.0.1:5500/src/pages/login.html")
+            location.replace( window.location.origin + "/src/pages/login.html")
         },3000)
 
      }else{
