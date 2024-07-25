@@ -19,7 +19,7 @@ const addNewProduct = (e) => {
     console.log(newProduct)
     console.log(localStorage.getItem("token"))
 
-    fetch("https://blogpost-server-production-d92d.up.railway.app/api/v1/blogs", {
+    fetch("https://blog-post-production-b61c.up.railway.app/api/v1/blogs", {
         method: "POST",
         headers: {
             "Content-Type" : "application/json",

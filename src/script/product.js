@@ -16,7 +16,7 @@ const renderData = (product) => {
 }
 
 const loadData = () => {
-    fetch(`https://blogpost-server-production-d92d.up.railway.app/api/v1/blogs/${id}`)
+    fetch(`https://blog-post-production-b61c.up.railway.app/api/v1/blogs/${id}`)
         .then(response => response.json())
         .then(data => {
             console.log(data)

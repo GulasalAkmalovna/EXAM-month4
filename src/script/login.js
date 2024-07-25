@@ -26,7 +26,7 @@ const loggedUser =  (e) => {
     let newUser = new User(userEmail,userPassword)
   
 
-   fetch("https://blogpost-server-production-d92d.up.railway.app/api/v1/user/login" , {
+   fetch("https://blog-post-production-b61c.up.railway.app/api/v1/user/login" , {
         method: "POST",
         headers: {
             "Content-type" : "application/json"
@@ -39,6 +39,7 @@ const loggedUser =  (e) => {
         if (data && data.data.token) {
             localStorage.setItem("token", data.data.token)
             ToastifyDisplay("Succesfully logged in", "succes").showToast()
+            console.log(true)
 
             setTimeout(() => {
                 location.replace( window.location.origin + "/index.html")

@@ -29,7 +29,7 @@ const registerNewUser = async (e) => {
     let newUser = new User(userName,userEmail,userPassword)
   
 
-    fetch("https://blogpost-server-production-d92d.up.railway.app/api/v1/user/register", {
+    fetch("https://blog-post-production-b61c.up.railway.app/api/v1/user/register", {
         method: "POST",
         headers: {
             "Content-Type" : "application/json"
